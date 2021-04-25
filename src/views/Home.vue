@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="my-auto w-full flex text-theme -enter-x">
     首页
   </div>
 </template>

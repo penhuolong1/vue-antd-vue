@@ -4,6 +4,7 @@ function resolve(dir) {
   return path.join(__dirname, dir)
 }
 module.exports = {
+  publicPath: './',
   pluginOptions: {
     'style-resources-loader': {
       preProcessor: 'less',

@@ -2,8 +2,9 @@ import Vue from 'vue'
 import App from './App.vue'
 import router from './router'
 import store from './store'
-import 'ant-design-vue/dist/antd.css'
+import 'element-ui/lib/theme-chalk/index.css'
 import '@/style/index.less'
+import '@/theme/index.css'
 
 Vue.config.productionTip = false
 new Vue({

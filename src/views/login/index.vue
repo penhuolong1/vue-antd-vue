@@ -9,7 +9,7 @@
       </div>
     </div>
     <div class="flex-1 h-full p-20 flex justify-center items-center">
-      <div :class="sysName+'-form'" class="w-3/4 enter-X">
+      <div :class="sysName+'-form'" class="w-3/4 enter-X max-w-sm">
         <LoginForm />
       </div>
     </div>

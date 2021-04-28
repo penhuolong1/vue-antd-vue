@@ -2,41 +2,59 @@
   <div class="w-full">
     <h1 class="font-bold text-3xl enter-X mb-6">登陆</h1>
     <Form :form="form">
-      <FormItem>
+      <FormItem class="enter-X">
         <Input v-model="form.name" size="large" placeholder="账号" />
       </FormItem>
-      <FormItem>
-        <InputPassword v-model="form.name" size="large" placeholder="账号" />
+      <FormItem class="enter-X">
+        <Input v-model="form.name" type="password" size="large" placeholder="账号" />
       </FormItem>
-      <ARow class="enter-X" type="flex" align="center">
-        <ACol :span="12">
-          <Checkbox v-model="rememberMe" size="small">
-            记住我
-          </Checkbox>
-        </ACol>
-        <ACol :span="12" class="text-right">
-          <Button type="link">忘记密码?</Button>
-        </ACol>
-      </ARow>
-      <FormItem class="enter-x">
-        <Button type="primary">登陆</Button>
+      <FormItem class="enter-X">
+        <Row type="flex" align="middle">
+          <Col :span="12">
+            <Checkbox v-model="rememberMe" size="small">
+              记住我
+            </Checkbox>
+          </Col>
+          <Col :span="12" class="text-right">
+            <Button type="text">忘记密码?</Button>
+          </Col>
+        </Row>
       </FormItem>
+      <FormItem class="enter-X">
+        <Button type="primary" class="w-full">登陆</Button>
+      </FormItem>
+      <Row type="flex" :gutter="20" align="middle">
+        <Col :span="8">
+          <Button size="small" class="w-full">手机登陆</Button>
+        </Col>
+        <Col :span="8">
+          <Button size="small" class="w-full">二维码登陆</Button>
+        </Col>
+        <Col :span="8">
+          <Button size="small" class="w-full">注册</Button>
+        </Col>
+      </Row>
+      <Divider class="my-5 enter-X" text="其他登录方式" />
+      <div class="flex">
+        <i class="el-icon-place" />
+      </div>
     </Form>
   </div>
 </template>
 
 <script>
-import { Form, Input, Row, Col, Checkbox, Button } from 'ant-design-vue'
+import { Form, FormItem, Input, Row, Col, Checkbox, Button } from 'element-ui'
+import Divider from '@/components/Divider/index'
 export default {
   components: {
     Form,
-    FormItem: Form.Item,
+    FormItem,
     Input,
-    InputPassword: Input.Password,
-    [Col.name]: Col,
-    [Row.name]: Row,
+    Col,
+    Row,
     Checkbox,
-    Button
+    Button,
+    Divider
   },
   props: {
 
@@ -59,6 +77,9 @@ export default {
 }
 </script>
 
-<style scoped lang="scss">
-
+<style scoped lang="less">
+/deep/ .inner-text{
+  font-size: 12px;
+  color: rgba(0, 0, 0, 0.45);
+}
 </style>
